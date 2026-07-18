@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "walk-mate-scaffold",
-    "slug": "walk-mate-scaffold",
+    "name": "워크메이트",
+    "slug": "walk-mate",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

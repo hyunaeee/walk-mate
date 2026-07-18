@@ -236,7 +236,15 @@ const styles = StyleSheet.create({
   themeCount: { color: C.inkFaint, fontSize: 11, marginTop: 2, fontWeight: '600' },
   allBtn: { width: '100%', alignItems: 'center', paddingVertical: 10 },
   allBtnTxt: { color: '#C97A2B', fontSize: 14, fontWeight: '800' },
-  bottomBar: { flexDirection: 'row', gap: 10, paddingBottom: 34, paddingTop: 8 },
+  // marginTop:'auto' keeps the buttons pinned to the bottom now that the
+  // time list above is content-sized rather than flex-grown
+  bottomBar: {
+    flexDirection: 'row',
+    gap: 10,
+    paddingBottom: 34,
+    paddingTop: 8,
+    marginTop: 'auto',
+  },
   nextBtn: {
     flex: 1,
     backgroundColor: '#FFC85C',
@@ -256,9 +264,13 @@ const styles = StyleSheet.create({
   },
   nextTxt: { color: C.ink, fontSize: 16, fontWeight: '800' },
   nextTxtOff: { color: C.inkFaint },
-  timeList: { gap: 12, marginTop: 24, flex: 1 },
+  // no `flex` here on purpose: RN(-web)'s `flex: 0` shorthand sets
+  // flex-basis to 0%, which collapses the container to zero height and the
+  // cards spill over the buttons below. Content-sized is what we want; the
+  // bottom bar anchors itself with marginTop:'auto' instead.
+  timeList: { gap: 12, marginTop: 24 },
   /** side-by-side cards on desktop instead of one tall stack */
-  timeListWide: { flexDirection: 'row', flex: 0, gap: 16 },
+  timeListWide: { flexDirection: 'row', gap: 16 },
   timeCardWide: { flex: 1, flexDirection: 'column', alignItems: 'flex-start', gap: 10, padding: 20 },
   timeCard: {
     flexDirection: 'row',

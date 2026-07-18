@@ -28,13 +28,17 @@
 
 ## 미리보기
 
-| 온보딩 — 테마 고르기 | 홈 — 모바일 |
-| :---: | :---: |
-| <img src="docs/screenshots/onboarding.png" alt="온보딩" width="440"/> | <img src="docs/screenshots/home-mobile.png" alt="모바일 홈" width="220"/> |
+<div align="center">
 
-| 3D 지도 — 반포 달빛 야경 코스 | 3D 지도 — 남산 숲길 코스 |
-| :---: | :---: |
-| <img src="docs/screenshots/map-banpo.png" alt="반포 코스 3D 지도" width="360"/> | <img src="docs/screenshots/map-namsan.png" alt="남산 코스 3D 지도" width="360"/> |
+**3D 지도 게임플레이** — 캐릭터가 실제 보행로를 따라 걷고, 체크포인트마다 포인트가 쌓입니다
+
+<img src="docs/screenshots/map-live.png" alt="3D 지도 게임플레이 (여의도 벚꽃 코스)" width="720"/>
+
+</div>
+
+| 온보딩 — 테마 고르기 | 홈 — 모바일 | 코스 전체보기 — 남산 숲길 |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/onboarding.png" alt="온보딩" width="380"/> | <img src="docs/screenshots/home-mobile.png" alt="모바일 홈" width="190"/> | <img src="docs/screenshots/map-namsan.png" alt="남산 코스 3D 지도" width="300"/> |
 
 <br/>
 

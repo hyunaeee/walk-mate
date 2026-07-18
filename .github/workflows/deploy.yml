@@ -1,0 +1,34 @@
+# main에 푸시될 때마다 웹 빌드를 gh-pages 브랜치로 배포한다.
+# 라이브 페이지: https://hyunaeee.github.io/walk-mate/
+name: Deploy web to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx expo export --platform web
+
+      # Pages의 Jekyll이 _expo 폴더(언더스코어 시작)를 버리지 않도록
+      - run: touch dist/.nojekyll
+
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
